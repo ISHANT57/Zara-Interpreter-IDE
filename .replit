@@ -1,0 +1,60 @@
+modules = ["web", "java-graalvm22.3", "bash", "python-3.12", "nodejs-20"]
+[agent]
+expertMode = true
+stack = "BEST_EFFORT_FALLBACK"
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Spring Boot Backend"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd frontend && pnpm dev"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Spring Boot Backend"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd springboot && java -Xmx300m -Xms75m -jar target/zara-interpreter-1.0.0.jar --server.port=8080"
+waitForPort = 8080
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["bash", "-c", "cd springboot && java -Xmx300m -Xms75m -jar target/zara-interpreter-1.0.0.jar --server.port=5000"]
+build = ["bash", "-c", "cd springboot && mvn clean package -DskipTests"]

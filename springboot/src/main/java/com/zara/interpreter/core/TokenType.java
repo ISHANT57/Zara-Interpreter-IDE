@@ -1,0 +1,11 @@
+package com.zara.interpreter.core;
+
+public enum TokenType {
+    SET, SHOW, WHEN, LOOP, WHILE, OTHERWISE,
+    NUMBER, STRING, IDENTIFIER,
+    PLUS, MINUS, MULTIPLY, DIVIDE,
+    EQUALS, EQEQ, GT, LT, GTE, LTE,
+    COLON, LBRACE, RBRACE,
+    LPAREN, RPAREN,
+    NEWLINE, INDENT, DEDENT, EOF
+}

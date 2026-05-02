@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: zara-ide
+    runtime: java
+    plan: free
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: java -Xmx300m -Xms75m -jar springboot/target/zara-interpreter-1.0.0.jar
+    healthCheckPath: /api/health
+    envVars:
+      - key: JAVA_VERSION
+        value: "17"

@@ -1,0 +1,22 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.2.0)[0;39m
+
+2026-05-02 17:54:21 - c.z.i.ZaraInterpreterApplication - Starting ZaraInterpreterApplication v1.0.0 using Java 19.0.2 with PID 474 (/home/runner/workspace/springboot/target/zara-interpreter-1.0.0.jar started by runner in /home/runner/workspace/springboot)
+2026-05-02 17:54:21 - c.z.i.ZaraInterpreterApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-02 17:54:21 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 5000 (http)
+2026-05-02 17:54:21 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-02 17:54:21 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-02 17:54:21 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-02 17:54:21 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 712 ms
+2026-05-02 17:54:22 - o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-05-02 17:54:22 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 5000 (http) with context path ''
+2026-05-02 17:54:22 - c.z.i.ZaraInterpreterApplication - Started ZaraInterpreterApplication in 1.533 seconds (process running for 2.109)
+2026-05-02 17:54:24 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-02 17:54:24 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-02 17:54:24 - o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
